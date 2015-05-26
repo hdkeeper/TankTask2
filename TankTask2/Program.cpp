@@ -1,4 +1,4 @@
-// Program.cpp: главный файл проекта.
+// Program.cpp: РіР»Р°РІРЅС‹Р№ С„Р°Р№Р» РїСЂРѕРµРєС‚Р°.
 
 #include "MainForm.h"
 
@@ -7,11 +7,11 @@ using namespace WindowsFormsApp;
 [STAThreadAttribute]
 int main(array<System::String ^> ^args)
 {
-	// Включение визуальных эффектов Windows XP до создания каких-либо элементов управления
+	// Р’РєР»СЋС‡РµРЅРёРµ РІРёР·СѓР°Р»СЊРЅС‹С… СЌС„С„РµРєС‚РѕРІ Windows XP РґРѕ СЃРѕР·РґР°РЅРёСЏ РєР°РєРёС…-Р»РёР±Рѕ СЌР»РµРјРµРЅС‚РѕРІ СѓРїСЂР°РІР»РµРЅРёСЏ
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 
-	// Создание главного окна и его запуск
+	// РЎРѕР·РґР°РЅРёРµ РіР»Р°РІРЅРѕРіРѕ РѕРєРЅР° Рё РµРіРѕ Р·Р°РїСѓСЃРє
 	Application::Run(gcnew MainForm());
 	return 0;
 }
