@@ -1,23 +1,23 @@
 #include "TankView.h"
 #include <math.h>
 
-// Êîíñòðóêòîð îáúåêòà
+// ÐšÐ¾Ð½ÑÑ‚Ñ€ÑƒÐºÑ‚Ð¾Ñ€ Ð¾Ð±ÑŠÐµÐºÑ‚Ð°
 TankView::TankView(int width, int height)
 {
 	this->width = width;
 	this->height = height;
 	
-	// Ýêçåìïëÿð ìîäåëè
+	// Ð­ÐºÐ·ÐµÐ¼Ð¿Ð»ÑÑ€ Ð¼Ð¾Ð´ÐµÐ»Ð¸
 	tank = new Tank();
 
-	// Êèñòè è ïåðüÿ
+	// ÐšÐ¸ÑÑ‚Ð¸ Ð¸ Ð¿ÐµÑ€ÑŒÑ
 	waterB = gcnew SolidBrush(Color::LightBlue);
 	gateB = gcnew SolidBrush(Color::Black);
 	borderP = gcnew Pen(Color::Black, 2);
 	sensorP = gcnew Pen(Color::DarkBlue, 3);
 }
 
-// Äåñòðóêòîð îáúåêòà
+// Ð”ÐµÑÑ‚Ñ€ÑƒÐºÑ‚Ð¾Ñ€ Ð¾Ð±ÑŠÐµÐºÑ‚Ð°
 TankView::~TankView()
 {
 	delete tank;
@@ -27,16 +27,16 @@ TankView::~TankView()
 	delete sensorP;
 }
 
-// Îòðèñîâàòü ãðàôè÷åñêîå ïðåäñòàâëåíèå ñèñòåìû
+// ÐžÑ‚Ñ€Ð¸ÑÐ¾Ð²Ð°Ñ‚ÑŒ Ð³Ñ€Ð°Ñ„Ð¸Ñ‡ÐµÑÐºÐ¾Ðµ Ð¿Ñ€ÐµÐ´ÑÑ‚Ð°Ð²Ð»ÐµÐ½Ð¸Ðµ ÑÐ¸ÑÑ‚ÐµÐ¼Ñ‹
 void TankView::draw(Graphics ^g)
 {
 	int tubeHeight = 50;
 	int tankHeight = height - 2 * tubeHeight;
 
-	// Ïîäâîäÿùàÿ òðóáà
+	// ÐŸÐ¾Ð´Ð²Ð¾Ð´ÑÑ‰Ð°Ñ Ñ‚Ñ€ÑƒÐ±Ð°
 	int tubeWidth = lround(tubeHeight * tank->inTube->perfomance / abs(tank->outTube->perfomance));
 	if (tank->inTube->active) {
-		// Ðèñóåì âîäó
+		// Ð Ð¸ÑÑƒÐµÐ¼ Ð²Ð¾Ð´Ñƒ
 		g->FillRectangle(waterB, 
 			(width - tubeWidth) / 2, 2, 
 			tubeWidth, tubeHeight + tankHeight);
@@ -45,7 +45,7 @@ void TankView::draw(Graphics ^g)
 		(width - tubeWidth) / 2, 2, 
 		tubeWidth, tubeHeight - 2);
 
-	// Áàê ñ âîäîé
+	// Ð‘Ð°Ðº Ñ Ð²Ð¾Ð´Ð¾Ð¹
 	int waterHeight = lround(tankHeight * tank->volume / tank->capacity);
 	g->FillRectangle(waterB, 
 		5, tubeHeight + tankHeight - waterHeight, 
@@ -55,15 +55,15 @@ void TankView::draw(Graphics ^g)
 		5, tubeHeight, 
 		width - 10, tankHeight);
 
-	// Îòâîäÿùàÿ òðóáà
+	// ÐžÑ‚Ð²Ð¾Ð´ÑÑ‰Ð°Ñ Ñ‚Ñ€ÑƒÐ±Ð°
 	if (tank->outTube->active) {
-		// Ðèñóåì âîäó
+		// Ð Ð¸ÑÑƒÐµÐ¼ Ð²Ð¾Ð´Ñƒ
 		g->FillRectangle(waterB,
 			(width - tubeHeight) / 2, tubeHeight + tankHeight,
 			tubeHeight, tubeHeight - 2);
 	}
 	else {
-		// Ðèñóåì çàêðûòóþ çàñëîíêó
+		// Ð Ð¸ÑÑƒÐµÐ¼ Ð·Ð°ÐºÑ€Ñ‹Ñ‚ÑƒÑŽ Ð·Ð°ÑÐ»Ð¾Ð½ÐºÑƒ
 		g->FillRectangle(gateB,
 			(width - tubeHeight) / 2, tubeHeight + tankHeight,
 			tubeHeight, 10);
@@ -76,7 +76,7 @@ void TankView::draw(Graphics ^g)
 		(width - tubeHeight) / 2, tubeHeight + tankHeight,
 		tubeHeight, tubeHeight - 2);
 
-	// Äàò÷èêè
+	// Ð”Ð°Ñ‚Ñ‡Ð¸ÐºÐ¸
 	int sensorHeight = lround(tankHeight * tank->openingSensor->height);
 	g->DrawEllipse(sensorP,
 		0, tubeHeight + tankHeight - sensorHeight - 5,
@@ -87,4 +87,3 @@ void TankView::draw(Graphics ^g)
 		width - 10, tubeHeight + tankHeight - sensorHeight - 5,
 		9, 9);
 }
-
