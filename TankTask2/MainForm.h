@@ -11,7 +11,7 @@ namespace WindowsFormsApp {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Главное окно программы
+	/// Р“Р»Р°РІРЅРѕРµ РѕРєРЅРѕ РїСЂРѕРіСЂР°РјРјС‹
 	/// </summary>
 	public ref class MainForm : public System::Windows::Forms::Form
 	{
@@ -20,14 +20,14 @@ namespace WindowsFormsApp {
 		{
 			InitializeComponent();
 
-			// Создать представление модели
+			// РЎРѕР·РґР°С‚СЊ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ РјРѕРґРµР»Рё
 			view = gcnew TankView(viewBox->Width, viewBox->Height);
 			tank = view->tank;
 		}
 
 	protected:
 		/// <summary>
-		/// Освободить все используемые ресурсы.
+		/// РћСЃРІРѕР±РѕРґРёС‚СЊ РІСЃРµ РёСЃРїРѕР»СЊР·СѓРµРјС‹Рµ СЂРµСЃСѓСЂСЃС‹.
 		/// </summary>
 		~MainForm()
 		{
@@ -54,20 +54,20 @@ namespace WindowsFormsApp {
 
 	private:
 		/// <summary>
-		/// Требуется переменная конструктора.
+		/// РўСЂРµР±СѓРµС‚СЃСЏ РїРµСЂРµРјРµРЅРЅР°СЏ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°.
 		/// </summary>
 		
-		// Ссылка на представление
+		// РЎСЃС‹Р»РєР° РЅР° РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ
 		TankView ^view = nullptr;
 
-		// Ссылка на модель
+		// РЎСЃС‹Р»РєР° РЅР° РјРѕРґРµР»СЊ
 		Tank *tank = 0;
 
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Обязательный метод для поддержки конструктора - не изменяйте
-		/// содержимое данного метода при помощи редактора кода.
+		/// РћР±СЏР·Р°С‚РµР»СЊРЅС‹Р№ РјРµС‚РѕРґ РґР»СЏ РїРѕРґРґРµСЂР¶РєРё РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° - РЅРµ РёР·РјРµРЅСЏР№С‚Рµ
+		/// СЃРѕРґРµСЂР¶РёРјРѕРµ РґР°РЅРЅРѕРіРѕ РјРµС‚РѕРґР° РїСЂРё РїРѕРјРѕС‰Рё СЂРµРґР°РєС‚РѕСЂР° РєРѕРґР°.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -170,7 +170,7 @@ namespace WindowsFormsApp {
 			this->topLabel->Name = L"topLabel";
 			this->topLabel->Size = System::Drawing::Size(460, 20);
 			this->topLabel->TabIndex = 5;
-			this->topLabel->Text = L"Производительность потока из подводящей трубы: 2,5 л/с";
+			this->topLabel->Text = L"РџСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚СЊ РїРѕС‚РѕРєР° РёР· РїРѕРґРІРѕРґСЏС‰РµР№ С‚СЂСѓР±С‹: 2,5 Р»/СЃ";
 			// 
 			// leftLabel
 			// 
@@ -180,7 +180,7 @@ namespace WindowsFormsApp {
 			this->leftLabel->Name = L"leftLabel";
 			this->leftLabel->Size = System::Drawing::Size(107, 72);
 			this->leftLabel->TabIndex = 6;
-			this->leftLabel->Text = L"Высота датчика, открывающего заслонку";
+			this->leftLabel->Text = L"Р’С‹СЃРѕС‚Р° РґР°С‚С‡РёРєР°, РѕС‚РєСЂС‹РІР°СЋС‰РµРіРѕ Р·Р°СЃР»РѕРЅРєСѓ";
 			this->leftLabel->TextAlign = System::Drawing::ContentAlignment::TopRight;
 			// 
 			// rightLabel
@@ -191,7 +191,7 @@ namespace WindowsFormsApp {
 			this->rightLabel->Name = L"rightLabel";
 			this->rightLabel->Size = System::Drawing::Size(108, 72);
 			this->rightLabel->TabIndex = 7;
-			this->rightLabel->Text = L"Высота датчика, закрывающего заслонку";
+			this->rightLabel->Text = L"Р’С‹СЃРѕС‚Р° РґР°С‚С‡РёРєР°, Р·Р°РєСЂС‹РІР°СЋС‰РµРіРѕ Р·Р°СЃР»РѕРЅРєСѓ";
 			// 
 			// startButton
 			// 
@@ -201,7 +201,7 @@ namespace WindowsFormsApp {
 			this->startButton->Name = L"startButton";
 			this->startButton->Size = System::Drawing::Size(238, 28);
 			this->startButton->TabIndex = 8;
-			this->startButton->Text = L"Запустить симуляцию";
+			this->startButton->Text = L"Р—Р°РїСѓСЃС‚РёС‚СЊ СЃРёРјСѓР»СЏС†РёСЋ";
 			this->startButton->UseVisualStyleBackColor = true;
 			this->startButton->Click += gcnew System::EventHandler(this, &MainForm::startButton_Click);
 			// 
@@ -218,7 +218,7 @@ namespace WindowsFormsApp {
 			this->bottomLabel->Name = L"bottomLabel";
 			this->bottomLabel->Size = System::Drawing::Size(289, 20);
 			this->bottomLabel->TabIndex = 9;
-			this->bottomLabel->Text = L"Количество жидкости в ёмкости: 0 л";
+			this->bottomLabel->Text = L"РљРѕР»РёС‡РµСЃС‚РІРѕ Р¶РёРґРєРѕСЃС‚Рё РІ С‘РјРєРѕСЃС‚Рё: 0 Р»";
 			// 
 			// MainForm
 			// 
@@ -238,7 +238,7 @@ namespace WindowsFormsApp {
 			this->MaximizeBox = false;
 			this->Name = L"MainForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"Модель регулятора";
+			this->Text = L"РњРѕРґРµР»СЊ СЂРµРіСѓР»СЏС‚РѕСЂР°";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->viewBox))->EndInit();
 			this->topPanel->ResumeLayout(false);
 			this->leftPanel->ResumeLayout(false);
@@ -250,56 +250,56 @@ namespace WindowsFormsApp {
 #pragma endregion
 
 		private: System::Void viewBox_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
-			// Нарисовать ёмкость
+			// РќР°СЂРёСЃРѕРІР°С‚СЊ С‘РјРєРѕСЃС‚СЊ
 			view->draw(e->Graphics);
 		}
 
 		private: System::Void inPerflBar_ValueChanged(System::Object^  sender, System::EventArgs^  e) {
-			// Пересчитать производительность трубы
+			// РџРµСЂРµСЃС‡РёС‚Р°С‚СЊ РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚СЊ С‚СЂСѓР±С‹
 			tank->inTube->perfomance = - tank->outTube->perfomance *
 				(double)inPerflBar->Value / (double)inPerflBar->Maximum;
 
-			// Обновить верхнюю надпись
-			topLabel->Text = String::Format(L"Производительность потока из подводящей трубы: {0} л/с", 
+			// РћР±РЅРѕРІРёС‚СЊ РІРµСЂС…РЅСЋСЋ РЅР°РґРїРёСЃСЊ
+			topLabel->Text = String::Format(L"РџСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚СЊ РїРѕС‚РѕРєР° РёР· РїРѕРґРІРѕРґСЏС‰РµР№ С‚СЂСѓР±С‹: {0} Р»/СЃ", 
 				tank->inTube->perfomance);
 		
-			// Перерисовать ёмкость
+			// РџРµСЂРµСЂРёСЃРѕРІР°С‚СЊ С‘РјРєРѕСЃС‚СЊ
 			viewBox->Refresh();
 		}
 
 		private: System::Void openHeightBar_ValueChanged(System::Object^  sender, System::EventArgs^  e) {
-			// Пересчитать высоту открывающего датчика
+			// РџРµСЂРµСЃС‡РёС‚Р°С‚СЊ РІС‹СЃРѕС‚Сѓ РѕС‚РєСЂС‹РІР°СЋС‰РµРіРѕ РґР°С‚С‡РёРєР°
 			tank->openingSensor->height = 1 - (double)openHeightBar->Value / (double)openHeightBar->Maximum;
 		
-			// Перерисовать ёмкость
+			// РџРµСЂРµСЂРёСЃРѕРІР°С‚СЊ С‘РјРєРѕСЃС‚СЊ
 			viewBox->Refresh();
 		}
 
 		private: System::Void closeHeightBar_ValueChanged(System::Object^  sender, System::EventArgs^  e) {
-			// Пересчитать высоту закрывающего датчика
+			// РџРµСЂРµСЃС‡РёС‚Р°С‚СЊ РІС‹СЃРѕС‚Сѓ Р·Р°РєСЂС‹РІР°СЋС‰РµРіРѕ РґР°С‚С‡РёРєР°
 			tank->closingSensor->height = 1 - (double)closeHeightBar->Value / (double)closeHeightBar->Maximum;
 		
-			// Перерисовать ёмкость
+			// РџРµСЂРµСЂРёСЃРѕРІР°С‚СЊ С‘РјРєРѕСЃС‚СЊ
 			viewBox->Refresh();
 		}
 
 		private: System::Void simTimer_Tick(System::Object^  sender, System::EventArgs^  e) {
-			// Пересчитать параметры модели
+			// РџРµСЂРµСЃС‡РёС‚Р°С‚СЊ РїР°СЂР°РјРµС‚СЂС‹ РјРѕРґРµР»Рё
 			tank->update();
 		
-			// Перерисовать ёмкость
+			// РџРµСЂРµСЂРёСЃРѕРІР°С‚СЊ С‘РјРєРѕСЃС‚СЊ
 			viewBox->Refresh();
 		
-			// Обновить нижнюю надпись
-			bottomLabel->Text = String::Format(L"Количество жидкости в ёмкости: {0:f3} л", tank->volume);
+			// РћР±РЅРѕРІРёС‚СЊ РЅРёР¶РЅСЋСЋ РЅР°РґРїРёСЃСЊ
+			bottomLabel->Text = String::Format(L"РљРѕР»РёС‡РµСЃС‚РІРѕ Р¶РёРґРєРѕСЃС‚Рё РІ С‘РјРєРѕСЃС‚Рё: {0:f3} Р»", tank->volume);
 		}
 
 		private: System::Void startButton_Click(System::Object^  sender, System::EventArgs^  e) {
-			// Включить или выключить таймер
+			// Р’РєР»СЋС‡РёС‚СЊ РёР»Рё РІС‹РєР»СЋС‡РёС‚СЊ С‚Р°Р№РјРµСЂ
 			simTimer->Enabled = !simTimer->Enabled;
 		
-			// Изменить надпись на кнопке
-			startButton->Text = simTimer->Enabled ? L"Остановить симуляцию" : L"Запустить симуляцию";
+			// РР·РјРµРЅРёС‚СЊ РЅР°РґРїРёСЃСЊ РЅР° РєРЅРѕРїРєРµ
+			startButton->Text = simTimer->Enabled ? L"РћСЃС‚Р°РЅРѕРІРёС‚СЊ СЃРёРјСѓР»СЏС†РёСЋ" : L"Р—Р°РїСѓСЃС‚РёС‚СЊ СЃРёРјСѓР»СЏС†РёСЋ";
 		}
 
 	};
